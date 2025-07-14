@@ -18,7 +18,27 @@ A simple Spring Boot project that demonstrates how to use H2 as an embedded data
 7. [License 📜](#license)
 
 ---
+## **Project Structure 🌟**
+     ```bash
+        spring-boot-h2-demo/
+    ├── src/
+    │ ├── main/
+    │ │ ├── java/
+    │ │ │ └── com/
+    │ │ │ └── securepay/
+    │ │ │ ├── SpringBootH2DemoApplication.java
+    │ │ │ └── config/
+    │ │ │ └── SecurityConfig.java
+    │ │ └── resources/
+    │ │ ├── application.properties
+    │ │ └── data.sql
+    ├── .gitignore
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    └── README.md
 
+---
 ## **Features 🌟**
 
 - **In-Memory H2 Database**: Uses an embedded in-memory H2 database, perfect for development and testing purposes. 💾
