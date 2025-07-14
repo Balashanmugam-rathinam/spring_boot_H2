@@ -132,30 +132,32 @@ This endpoint allows you to register a new user. The password will be encoded us
      POST http://localhost:8080/api/register
 
 
-####Body (JSON):
- ```bash
-   {
-      "username": "new_user",
-      "password": "password123"
-   }
+#### Body (JSON):
+    ```bash
+       {
+           "username": "new_user",
+           "password": "password123"
+       }
 
 #### Response (201 Created):
- ```bash
-{
-  "id": 3,
-  "username": "new_user",
-  "role": "USER"
-}
+     ```bash
+    {
+      "id": 3,
+      "username": "new_user",
+      "role": "USER"
+    }
 Database Schema 🗃
 Users Table
 id: Auto-incremented primary key.
 
 username: User's login name (unique).
-
 password: Encrypted password.
 
 role: Role of the user (e.g., USER, ADMIN).
 
 The Users table is created automatically at the start of the application using Hibernate DDL.
+
+#### OUTPUT: 
+<img width="1917" height="975" alt="image" src="https://github.com/user-attachments/assets/5bb980b0-15b6-4a78-a5af-dfdb31580cb8" />
 
 
