@@ -60,4 +60,4 @@ Before setting up the project, make sure you have the following installed:
 
 2. Navigate into the project directory:
    ```bash
-       cd spring-boot-h2-demo
+       cd spring-boot-H2
