@@ -61,3 +61,81 @@ Before setting up the project, make sure you have the following installed:
 2. Navigate into the project directory:
    ```bash
        cd spring-boot-H2
+3. Using Maven (if installed globally):
+   ```bash
+       mvn spring-boot:run
+4. This will start the application on the default port 8080. You should see output like this:
+   ```bash
+       2025-07-15 12:34:56.789  INFO 12345 --- [  main] com.securepay.SpringBootH2DemoApplication  : Started SpringBootH2DemoApplication in 3.5 seconds (JVM running for 4.2)
+5. Accessing the H2 Console 🖥
+-> Once your application is running, you can access the H2 database console via your web browser.
+   ```bash
+       Open http://localhost:8080/h2-console.
+
+-> The H2 console login screen will appear.
+
+* JDBC URL: jdbc:h2:mem:testdb
+* Username: sa
+* Password: (Leave blank)
+
+This will allow you to interact directly with your in-memory database.
+
+## API Endpoints 🧑‍💻
+
+### **GET /api/users**
+
+This endpoint retrieves all users stored in the database.
+
+#### Request:
+```bash
+    GET http://localhost:8080/api/users
+
+[
+  {
+    "id": 1,
+    "username": "john_doe",
+    "role": "USER"
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "role": "ADMIN"
+  }
+]
+
+POST /api/register
+This endpoint allows you to register a new user. The password will be encoded using BCrypt.
+
+Request:
+
+POST http://localhost:8080/api/register
+
+Body (JSON):
+json
+Copy code
+{
+  "username": "new_user",
+  "password": "password123"
+}
+Response (201 Created):
+json
+Copy code
+{
+  "id": 3,
+  "username": "new_user",
+  "role": "USER"
+}
+Database Schema 🗃
+Users Table
+id: Auto-incremented primary key.
+
+username: User's login name (unique).
+
+password: Encrypted password.
+
+role: Role of the user (e.g., USER, ADMIN).
+
+The Users table is created automatically at the start of the application using Hibernate DDL.
+
+
+
