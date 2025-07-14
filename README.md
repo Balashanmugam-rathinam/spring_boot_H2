@@ -1,4 +1,4 @@
-# **Spring Boot H2 Demo 🚀**
+# **Spring Boot H2  🚀**
 
 A simple Spring Boot project that demonstrates how to use H2 as an embedded database, with Spring Security integrated for basic authentication. The project includes an in-memory H2 database, a REST API, and access to the H2 console for direct database management.
 
@@ -20,7 +20,7 @@ A simple Spring Boot project that demonstrates how to use H2 as an embedded data
 ---
 ## **Project Structure 🌟**
      ```bash
-        spring-boot-h2-demo/
+        spring-boot-H2/
     ├── src/
     │ ├── main/
     │ │ ├── java/
