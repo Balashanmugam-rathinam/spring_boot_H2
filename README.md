@@ -58,6 +58,6 @@ Before setting up the project, make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/spring_boot_H2.git
 
-2.Navigate into the project directory:
+2. Navigate into the project directory:
    ```bash
        cd spring-boot-h2-demo
