@@ -87,39 +87,40 @@ This will allow you to interact directly with your in-memory database.
 This endpoint retrieves all users stored in the database.
 
 #### Request:
-```bash
-    GET http://localhost:8080/api/users
-
-[
-  {
-    "id": 1,
-    "username": "john_doe",
-    "role": "USER"
-  },
-  {
-    "id": 2,
-    "username": "admin",
-    "role": "ADMIN"
-  }
-]
+    ```bash
+        GET http://localhost:8080/api/users
+#### SQL       
+     ```bash
+    [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "role": "USER"
+      },
+      {
+        "id": 2,
+        "username": "admin",
+        "role": "ADMIN"
+      }
+    ]
 
 POST /api/register
 This endpoint allows you to register a new user. The password will be encoded using BCrypt.
 
-Request:
+#### Request:
+     ```bash
+     POST http://localhost:8080/api/register
 
-POST http://localhost:8080/api/register
 
-Body (JSON):
-json
-Copy code
-{
-  "username": "new_user",
-  "password": "password123"
-}
-Response (201 Created):
-json
-Copy code
+####Body (JSON):
+ ```bash
+   {
+      "username": "new_user",
+      "password": "password123"
+   }
+
+#### Response (201 Created):
+ ```bash
 {
   "id": 3,
   "username": "new_user",
@@ -136,6 +137,5 @@ password: Encrypted password.
 role: Role of the user (e.g., USER, ADMIN).
 
 The Users table is created automatically at the start of the application using Hibernate DDL.
-
 
 
